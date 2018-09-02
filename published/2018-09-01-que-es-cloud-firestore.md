@@ -13,10 +13,10 @@ A diferencia de la base de tiempo real, Firestore cuenta con una API mas expresi
 ```
 const events = db.collection('eventos')
 const query = events
- .where('city', '==', 'cochabamba')
- .where('type', '==', 'hackaton')
+  .where('city', '==', 'cochabamba')
+  .where('type', '==', 'hackaton')
 ```
-{: .language-javascript}
+{: .language-js}
 
 ### Actualizaciones en tiempo real y modo offline
 Los datos se sincronizan entre todos los dispositivos conectados ante cualquier creación, actualización o eliminación, ademas, almacena en cache los datos mas utilizados por tu aplicación para que en el caso tu dispositivo se deconecte de internet, pueda seguir realizando las acción necesarias hasta que se conecte nuevamente y sea actualizada los datos en la nube.
@@ -43,16 +43,14 @@ Si estas pensando crear aplicaciones bridge para móviles, puedes usar NativeScr
 Sobre la mayoria de estos puntos, ire creando publicaciones extra para ahondar sobre ellos.
 
 ### 1.- ¿Qué es una base de datos NoSQL?
-
-> Una base de datos NoSQL
-> - No cuenta con un lenguaje para realizar consultas, a diferencias de las base de datos relacionales con soporte SQL (Structured Query Language).
-> - No utiliza tablas para almacenar los datos y al existir diferentes tipos de base de datos NoSQL, puedes encontrar los que son del tipo llave/valor, base de datos orientado a documentos, etc.
-> - No usa un esquema o receta para definir la estructura de donde guardarás tus datos, con esto, cuentas con flexibilidad para guardar los datos.
-> - Al tener flexibilidad, no existe el concepto de normalización y es por eso que podrias encontrar datos duplicados.
-> - En el caso de de Cloud Firestore, al usar colecciones, no existe una relación fuerte entre colecciones como existiria entre tablas de una base de datos SQL. (Este punto lo tocare en publicaciones posteriores)
+Una base de datos NoSQL
+- No cuenta con un lenguaje para realizar consultas, a diferencias de las base de datos relacionales con soporte SQL (Structured Query Language).
+- No utiliza tablas para almacenar los datos y al existir diferentes tipos de base de datos NoSQL, puedes encontrar los que son del tipo llave/valor, base de datos orientado a documentos, etc.
+- No usa un esquema o receta para definir la estructura de donde guardarás tus datos, con esto, cuentas con flexibilidad para guardar los datos.
+- Al tener flexibilidad, no existe el concepto de normalización y es por eso que podrias encontrar datos duplicados.
+- En el caso de de Cloud Firestore, al usar colecciones, no existe una relación fuerte entre colecciones como existiria entre tablas de una base de datos SQL. (Este punto lo tocare en publicaciones posteriores)
 
 ### 2.- ¿Qué significa tener una base de datos en la nube?
-
 Tu base de datos se encuentra en internet y por eso necesitarás conexión a internet para poder acceder a ella. Aunque Cloud Firestore cuenta con la opción offline, la cual me permite poder realizar acciones a la base de datos si mi dispositivo no tiene internet, no existe por ahora una opción de pruebas hacia una copia de tu base de datos en tu computadora. Actualmente, se sabe que el equipo de Firebase está trabajando en un emulador, al igual que existe para su base de datos en tiempo real.
 
 ### 3.- ¿Qué significa tener los datos en tiempo real?
